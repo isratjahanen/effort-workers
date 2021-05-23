@@ -174,10 +174,10 @@ document.getElementById("mbody2").style.display = 'none';
 	
 document.getElementById("result").style.display = 'block';
 
-var link1 = document.getElementById("filename").value;
+var link1 = document.getElementById("idf").value;
 
-var link = 'https://effortworkers.blogspot.com/p/imgfile.html?'+(link1);
-
+var link = 'https://effortworkers.blogspot.com/p/imgfile.html?'+(link1)+".png";
+	
 document.getElementById("link").innerHTML = (link);
 
 }
