@@ -165,8 +165,7 @@ firebase.auth().onAuthStateChanged(user => {
 
 function docall(){
 
-document.getElementById("uploadfile").style.display = 'none';
-document.getElementById("submit").style.display = 'none';	
+	
 
 document.getElementById("result").style.display = 'block';
 
