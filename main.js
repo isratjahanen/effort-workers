@@ -165,7 +165,7 @@ firebase.auth().onAuthStateChanged(user => {
 
 function docall(){
 
-document.getElementById("main").style.display = 'none';
+document.getElementById("mainr").style.display = 'none';
 
 document.getElementById("result").style.display = 'block';
 
