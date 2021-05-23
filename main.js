@@ -168,6 +168,10 @@ function docall(){
 	
 document.getElementById("mbody").style.display = 'none';
 	
+document.getElementById("mbody1").style.display = 'none';
+	
+document.getElementById("mbody2").style.display = 'none';	
+	
 document.getElementById("result").style.display = 'block';
 
 var link1 = document.getElementById("filename").value;
