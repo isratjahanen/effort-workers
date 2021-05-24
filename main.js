@@ -80,7 +80,15 @@ form.addEventListener('submit', e => {
 		alert("Plz wait")
 	}
 	else{
-
+		
+		
+document.getElementById("mbody").style.display = 'none';
+	
+document.getElementById("mbody1").style.display = 'none';
+	
+document.getElementById("mbody2").style.display = 'none';
+		
+document.getElementById("loder").style.display = 'block';		
 
 var content = document.getElementById('content').value;
 var titles = document.getElementById('title').value;
@@ -165,12 +173,7 @@ firebase.auth().onAuthStateChanged(user => {
 
 function docall(){
 
-	
-document.getElementById("mbody").style.display = 'none';
-	
-document.getElementById("mbody1").style.display = 'none';
-	
-document.getElementById("mbody2").style.display = 'none';	
+document.getElementById("loder").style.display = 'none';		
 	
 document.getElementById("result").style.display = 'block';
 
