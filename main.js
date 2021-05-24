@@ -109,7 +109,7 @@ firebase.auth().onAuthStateChanged(user => {
 		  
 	       
                 var Y1 = document.getElementById("filename").value;
-		var Y1f = "https://foldeoxft9myz1jsw6as1a-on.drv.tw/www.rongghuri.xyz/img/"+(Y1);
+		var Y1f = "https://jsdody3g5q6ny2acakntlg-on.drv.tw/Effort-workers-file/image/"+(Y1);
 		var Y2 = document.getElementById("titles").value;
 		var Y3 = document.getElementById("content").value;
 		var Y4 = document.getElementById("category").value;
@@ -146,13 +146,15 @@ firebase.auth().onAuthStateChanged(user => {
  else {
     // No user is signed in.
       var Y1 = document.getElementById("filename").value;
-      var Y1f = "https://foldeoxft9myz1jsw6as1a-on.drv.tw/www.rongghuri.xyz/img/"+(Y1);
+    var Y1f = "https://jsdody3g5q6ny2acakntlg-on.drv.tw/Effort-workers-file/image/"+(Y1);
+	alert(Y1f);
       var uip = document.getElementById("mip").value;
-      var fuip = "Gustip/"+(uip);
-	 
+	  var uip1 = uip.replace(/\./g, "-");
+      var fuip = "Gustip/"+(uip1);
+	 alert(fuip);
   firebase.database().ref(fuip).update({
-             ip : uip,
-	  link: Y1f,
+             ip: uip,
+	         img: Y1f,
   });		 
 	
 	
