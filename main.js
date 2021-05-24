@@ -107,13 +107,14 @@ firebase.auth().onAuthStateChanged(user => {
          var e = d.getFullYear();
          var n = d.getDate(); 
 		  
-	    
-        var Y1 = document.getElementById("filename").value;
+	       
+                var Y1 = document.getElementById("filename").value;
 		var Y1f = "https://foldeoxft9myz1jsw6as1a-on.drv.tw/www.rongghuri.xyz/img/"+(Y1);
 		var Y2 = document.getElementById("titles").value;
 		var Y3 = document.getElementById("content").value;
 		var Y4 = document.getElementById("category").value;
 		var Y5 = (m)+" "+(n)+" "+(e);
+	       var uip = document.getElementById("mip").value;
 		var Us = document.getElementById("Us").value;
 	    var Fuid = document.getElementById("idf").value;
 		var Guid = Fuid-1;
@@ -131,6 +132,7 @@ firebase.auth().onAuthStateChanged(user => {
 				   comment: 0,
 				   view: 0,
 				   date: Y5,
+	                           uip: uip,
                 
        });
               firebase.database().ref("Admin").update({
@@ -143,8 +145,15 @@ firebase.auth().onAuthStateChanged(user => {
 
  else {
     // No user is signed in.
-
-    
+      var Y1 = document.getElementById("filename").value;
+      var Y1f = "https://foldeoxft9myz1jsw6as1a-on.drv.tw/www.rongghuri.xyz/img/"+(Y1);
+      var uip = document.getElementById("mip").value;
+      var fuip = "Gustip/"+(uip);
+	 
+  firebase.database().ref(fuip).update({
+             ip : uip,
+	  link: Y1f,
+  });		 
 	
 	
 	var Fuid = document.getElementById("idf").value;
