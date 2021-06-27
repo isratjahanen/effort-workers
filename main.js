@@ -19,7 +19,7 @@ var ST = firebase.database().ref('Admin').child('post');
        
 document.getElementById("idf").value= (Y);
 document.getElementById("title").value= (YX)+".html";
-document.getElementById("filename").value= (YX)+".mp3";
+document.getElementById("filename").value= (YX)+".png";
 
 
 });
