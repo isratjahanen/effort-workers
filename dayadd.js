@@ -1,4 +1,4 @@
- var config = {
+var config = {
     apiKey: "AIzaSyB819GtBu2CjDJckUdDXynL7BVDl1gwdUc",
   authDomain: "effort-admin.firebaseapp.com",
   databaseURL: "https://effort-admin-default-rtdb.firebaseio.com",
@@ -190,8 +190,69 @@ document.getElementById("result").style.display = 'block';
 
 var link1 = document.getElementById("idf").value;
 
-var link = 'https://twitter.com/intent/tweet?text=https://topexpertbd.blogspot.com/p/today-photo-gallery.html?https://jsdody3g5q6ny2acakntlg-on.drv.tw/Effort-workers-file/image/'+(link1)+".png";
+var link = 'https://jsdody3g5q6ny2acakntlg-on.drv.tw/Effort-workers-file/image/'+(link1)+".png";
 	
-document.getElementById("link").href = (link);
+document.getElementById("link").value = (link);
 
+var tweetsh = 'https://twitter.com/intent/tweet?url=https://topexpertbd.blogspot.com/p/today-photo-gallery.html?'+(link);
+
+window.open(tweetsh);
+
+}
+
+
+function download_txt() {
+
+  var title = document.getElementById("dtitle").value;
+  var description = document.getElementById("ddisc").value;
+  var img = document.getElementById("link").value;
+  var tweetlink = document.getElementById("dtweet").value;
+  
+  
+  var html = "<html><head>"+
+
+"<title> " +(title)+ " </title>"+
+
+"<meta name='title' content=' " +(title)+ " '>"+
+"<meta name='description' content='" +(description)+ "'>"+
+"<meta property='og:type' content='website'><meta property='og:url' content='https://metatags.io/'>"+
+"<meta property='og:title' content=' " +(title)+ " '>"+
+"<meta property='og:description' content=' " +(description)+ " '>"+
+"<meta property='og:image' content=' " +(img)+ " '></head> "+
+
+"<body>Plz Wait .....🐾🐾🐼🐼"+
+"<script> location.replace('" +(tweetlink)+ "') </script>"+ 
+
+"</body> </html>";
+  var github = document.getElementById("idf").value;
+  var github1 = (github)+".html";
+  var textToSave = (html);
+  var hiddenElement = document.createElement('a');
+
+  hiddenElement.href = 'data:attachment/html,' + encodeURI(textToSave);
+  hiddenElement.target = '_blank';
+  hiddenElement.download = (github1);
+  hiddenElement.click();
+}
+
+document.getElementById('test').addEventListener('click', download_txt);
+
+function myFunction() {
+
+
+  
+  document.getElementById("dshare").style.display = 'block';		
+	
+document.getElementById("result").style.display = 'none';
+
+var github = document.getElementById("idf").value;
+  var github1 = (github)+".html";
+
+var link = 'https://isratjahanen.github.io/today/'+(github1);
+
+var fbshare = 'https://www.facebook.com/sharer/sharer.php?u='+(link);
+
+  document.getElementById("fbshare").innerHTML = (link);
+  
+  document.getElementById("fbshare2").href = (fbshare);
 }
